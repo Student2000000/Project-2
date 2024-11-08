@@ -1,8 +1,7 @@
 import java.util.Set;
 
 /**
- * Using encapuslation the class takes the data from NameGen and holds it
- * for use
+ * This class takes the data from NameGen and holds it for later use
  */
 
 public class NameHold {

@@ -5,7 +5,8 @@ import static java.util.Objects.hash;
 
 public class LinearProbingWithCount<K, V> implements DictionaryInterface <K, V>{
 private int probeCount = 0;
-    //START of code from In-class repo:
+
+//START of code from In-class repo:
 // The dictionary:
 private int numberOfEntries;
     private static final int DEFAULT_CAPACITY = 5;        // Must be prime
@@ -430,10 +431,15 @@ private int numberOfEntries;
             value = newValue;
         } // end setValue
     } // end Entry
+
 //END Code from in class repo
 
-
-public int search(K key) {
+    /**
+     * Searches the lists inconjuntion with LinearProbe to find places to put data
+     * @param key   key from hashable
+     * @return probes   number of probes per search
+     */
+    public int search(K key) {
         int probes = 0;
         int index = hash(key);
 
@@ -448,6 +454,12 @@ public int search(K key) {
         return probes; //unsuccessful, returning number of probes
 }
 
+    /**
+     * Conducts LinearProbing
+     * @param index   index of the data
+     * @param key   key of the data
+     * @return compCount   Counts comparisons
+     */
 
     public int LinearProbe(int index, K key){
         int compCount = 0;

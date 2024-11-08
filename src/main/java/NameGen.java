@@ -26,7 +26,7 @@ public class NameGen {
     /**
      * Creates a set of "names"
      * @param amt   How many unique names to be generated
-     * @param lengthOfName   To be used to make a name of spcefied length
+     * @param lengthOfName   used to make a name of spcefied length
      * @return   The new set of names
      */
     public static Set<String> nameSetCreate (int amt, int lengthOfName) {

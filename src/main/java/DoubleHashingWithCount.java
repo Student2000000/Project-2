@@ -436,6 +436,12 @@ public class DoubleHashingWithCount<K, V> implements DictionaryInterface<K, V> {
     } // end Entry
 //END Code from in class repo
 
+    /**
+     * Searches the lists inconjuntion with doubleHash to find places to put data
+     * @param key   key from hashable
+     * @return probes   number of probes per search
+     */
+
     public int search(K key) {
         int probes = 0;
         int index = hash(key);
@@ -451,6 +457,13 @@ public class DoubleHashingWithCount<K, V> implements DictionaryInterface<K, V> {
         return probes; //unsuccessful, returning number of probes
     }
 
+
+    /**
+     * Conducts Double Hashing
+     * @param i
+     * @param key   Key associated with the data
+     * @return
+     */
 
     public int doubleHash(int i, K key) {
         int compCountHash = 0;
